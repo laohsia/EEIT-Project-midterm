@@ -1,0 +1,132 @@
+
+@import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
+
+.delmar{
+	margin: 0;
+	padding: 0;
+}
+td{
+	vertical-align: inherit;
+	line-height: 30px;
+	border:1px solid black;
+	padding: 0 20px;
+	word-break: break-all;
+	text-align: center;
+}
+table{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+body {
+	font-family: 'cwTeXYen' !important;
+	background-image: url(image/木質背景3.jpg);
+	/* background-repeat: no-repeat; */
+	background-size: cover;
+}
+
+.divst1 {
+	float: left;
+	border: 2px solid gray;
+	border-radius: 15px;
+	height: fit-content;
+	background-image: url(image/墨綠色背景.jpg); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 15px;
+	margin-left: 20px;
+}
+
+.divst2 {
+	width: 150px;
+	height: 750px;
+	border: 2px solid gray;
+	float: left;
+	border-radius: 15px;
+	margin-right: 10px;
+	background-image: url(image/墨綠色背景.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+}
+
+nav {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 2px solid gray;
+	border-radius: 10px;
+	font-size:large;
+	background-image: url(image/墨綠色背景.jpg);
+
+}
+
+hgroup {
+	/* border: 3px solid gray; */
+	width: fit-content;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-weight: bold
+}
+
+img {
+	width: 70px;
+	height: 70px;       
+	
+}
+
+/* figure {
+	border: 2px solid gray;
+	border-radius: 15px;
+	background-image: url(image/木質背景1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+figcaption {
+	width: 500px;
+	text-align: justify;
+	font-weight: bold;
+} */
+
+span {
+	width: 100px;
+	text-align: center;
+	border: 2px solid gray;
+	border-radius: 15px;
+	font-size: larger;
+	margin-right: 100px;
+	font-weight: bold;
+	padding: 5px;
+	background-image: url(image/木質背景1.jpg);
+
+}
+.listst1 {
+	list-style: none;
+	list-style-image: url(image/骰子1.png);
+	margin-left: 20px;
+}
+a {
+	width: 100px;
+	text-align: center;
+	border: 2px solid gray;
+	border-radius: 15px;
+	font-size: larger;
+	margin-right: 100px;
+	font-weight: bold;
+	padding: 5px;
+	background-image: url(image/木質背景1.jpg);
+
+}
+.ast{
+    text-decoration:none; 
+width: 100px;
+	text-align: center;
+	border: 2px solid gray;
+	border-radius: 15px;
+	font-size: larger;
+	margin-right: 100px;
+	font-weight: bold;
+	padding: 5px;
+}

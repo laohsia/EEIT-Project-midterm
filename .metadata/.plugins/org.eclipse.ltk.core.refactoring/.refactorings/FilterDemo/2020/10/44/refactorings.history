@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LogFilter.java&apos; to &apos;MyWebDemo1/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;FilterDemo&apos;&#x0D;&#x0A;- Destination element: &apos;MyWebDemo1/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;LogFilter.java&apos;" description="Copy compilation unit" destination="=MyWebDemo1/src&lt;" element1="/src&lt;{LogFilter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1603869996353" units="1" version="1.0"/>
+</session>

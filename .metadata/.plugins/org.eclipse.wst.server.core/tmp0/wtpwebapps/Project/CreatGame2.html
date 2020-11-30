@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.fsst{
+text-align:center;
+width:fit-content;
+border:1px solid black;
+line-height:2
+}
+</style>
+</head>
+<body>
+
+<fieldset class="fsst">
+        <legend>新增遊戲至DB</legend>
+        <form action="./Controller" method="post">
+            中文名稱 : <input type="text" name="c_name" autocomplete="off" required="required">
+            <br>
+            英文名稱 : <input type="text" name="e_name" autocomplete="off" required="required">
+            <br>
+            圖片連結 : <input type="text" name="img_url" autocomplete="off" required="required">
+            <br>
+            遊戲作者 : <input type="text" name="g_maker" autocomplete="off">
+            <br>
+            插畫家 : <input type="text" name="iss" autocomplete="off">
+            <br>
+     <label for="memo">遊戲內容 : </label>       
+     <textarea id="memo" name="info" autocomplete="off"></textarea>
+     <br>
+            價格 : <input type="text" name="price" autocomplete="off" required>
+     <input type="submit" value="送出" name="creat">
+     <input type="reset" value="清除">
+        </form>
+    </fieldset>
+
+</body>
+</html>

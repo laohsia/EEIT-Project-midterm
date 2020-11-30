@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="Header/header_style.css">
+<link rel="stylesheet" href="Header/menu_style.css">
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"
+	integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+	crossorigin="anonymous"></script>
+<Script text="text/javascript">
+	$(document).ready(function() {
+		$("#optionmenu>dd>dl>dd").hide();
+		$.each($("#optionmenu>dd>dl>dt"), function() {
+			$(this).click(function() {
+				$("#optionmenu>dd>dl>dd ").not($(this).next()).slideUp();
+				$(this).next().slideToggle(500);
+				//$(this).next().toggle();
+			});
+		});
+	});
+</script>
+</Script>
+<style>
+.form {
+	float: right;
+}
+
+.lane1, .lane2, .lane3{
+	float: left;
+	width: 1000px;
+	margin: 10px;
+}
+
+.t1 {
+	border: dashed 2px green;
+	padding: 10px green;
+	border-radius: 20px;
+}
+
+td {
+	margin: 5px;
+	border: 2px solid green;
+}
+</style>
+</head>
+
+<body>
+
+	<article>
+		<header>
+			<div>
+				<ul class="listst1">
+					<li>
+						<p class="titlest">
+							<big><big><big>享玩 桌遊</big></big> </big>
+						</p>
+					</li>
+					<p style="font-size: larger; font-weight: bold;">
+						<big>讓因桌遊而產生的歡笑&emsp;充滿生命中的每分每秒</big>
+					</p>
+				</ul>
+			</div>
+			<hgroup>
+				<h2 style="width: fit-content;">放輕心情</h2>
+				<h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;享受與親友</h2>
+				<h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;共同度過的桌遊時光</h2>
+			</hgroup>
+			<nav>
+				<div>
+					<span style="margin-left: 100px;">網站起源</span> <span>最新消息</span> <span>分類檢索</span>
+					<span>購物車</span> <span>討論區</span> <span>會員中心</span> <span>聯絡我們</span>
+				</div>
+			</nav>
+		</header>
+		<form action="activityServlet" method="get">
+			<div class="st1">
+				<div class="form">
+					<legend>
+						<table cellspacing="2" cellpadding="1" width="100%">
+							活動查詢
+							<input class="sch" type="text" placeholder="請輸入關鍵字" name="search"
+								value="" aria-label="Search">
+							<button class="schbut" type="submit">Search</button>
+
+						</table>
+					</legend>
+				</div>
+		</form>
+		<div class="menu">
+			<h3>最新消息</h3>
+			<dl id="optionmenu">
+				<dd>
+					<dl>
+						<dt>新品上架</dt>
+						<dd>
+							<ul>
+								<li><a href=#>語文</a></li>
+								<li><a href=#>數學</a></li>
+								<li><a href=#>自然</a></li>
+								<li><a href=#>社會</a></li>
+								<li><a href=#>科技</a></li>
+								<li><a href=#>藝術</a></li>
+								<li>綜合</li>
+							</ul>
+						</dd>
+					</dl>
+				</dd>
+				<dd>
+					<dl>
+						<dt>
+							<a href="regisact.html">課程資訊</a>
+						</dt>
+					</dl>
+				</dd>
+				<dd>
+					<dl>
+						<dt>活動消息</dt>
+						<dd>
+							<ul>
+								<li><a href=#>新竹</a></li>
+								<li><a href=#>嘉義</a></li>
+								<li><a href=#>彰化</a></li>
+								<li><a href=#>高雄</a></li>
+								<li><a href=#>台南</a></li>
+								<li><a href=#>桃園</a></li>
+								<li><a href=#>台北</a></li>
+								<li><a href=#>台中</a></li>
+							</ul>
+						</dd>
+					</dl>
+				<dd>
+					<dl>
+						<dt>開箱試玩</dt>
+						<dd>
+							<ul>
+								<li><a href=#>最新開箱</a></li>
+								<li><a href=#>玩法介紹</a></li>
+								<li><a href=#>比賽直播</a></li>
+							</ul>
+						</dd>
+					</dl>
+				<dd>
+					<dl>
+						<dt>
+							<a href=Controler.jsp>管理者系統</a>
+						</dt>
+					</dl>
+		</div>
+
+		<div class="lane1">
+			<h3>師資培訓班</h3>
+			<figure class="f1" width="600Px">
+				<table class="t1">
+					<tr>
+						<th>地區</th>
+						<th>類型</th>
+						<th>時間1</th>
+						<th>時間2</th>
+						<th>地點</th>
+						<th>地址</th>
+						<th>費用</th>
+						<th>報名</th>
+					</tr>
+					<tr id="act1">
+						<td>台北</td>
+						<td>專業師資初階班</td>
+						<td>2020/9/20</td>
+						<td>2020/9/27</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>8000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act2">
+						<td>台北</td>
+						<td>專業師資初階班</td>
+						<td>2020/11/08</td>
+						<td>2020/11/15</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>8000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act3">
+						<td>台中</td>
+						<td>專業師資初階班</td>
+						<td>2020/10/24</td>
+						<td>2020/10/25</td>
+						<td>瓦屋桌遊休閒館</td>
+						<td>台中市南屯區向上南路一段197號</td>
+						<td>8000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act4">
+						<td>嘉義</td>
+						<td>專業師資初階班</td>
+						<td>2020/10/31</td>
+						<td>2020/11/01</td>
+						<td>嘉義文化創意產業園區1F展覽室</td>
+						<td>嘉義市西區中山路616號</td>
+						<td>8000</td>
+						<td><button>
+								<a href="/regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act5">
+						<td>高雄</td>
+						<td>專業師資初階班</td>
+						<td>2020/11/08</td>
+						<td>2020/11/15</td>
+						<td>頭比家桌遊咖啡館</td>
+						<td>高雄市鼓山區明華路7號</td>
+						<td>8000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act6">
+						<td>台北</td>
+						<td>專業師資進階班</td>
+						<td>2020/11/08</td>
+						<td>2020/11/15</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>8000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+				</table>
+		</div>
+		<div class="lane2">
+			<h3>天鵝桌遊營</h3>
+			<figure class="f1" width="600Px">
+				<table class="t2">
+					<tr>
+						<th>地區</th>
+						<th>類型</th>
+						<th>時間1</th>
+						<th>時間2</th>
+						<th>天數</th>
+						<th>地點</th>
+						<th>地址</th>
+						<th>費用</th>
+						<th>報名</th>
+					</tr>
+					<tr id="act7">
+						<td>台北</td>
+						<td>天鵝桌遊營(國小A)</td>
+						<td>2021/01/25</td>
+						<td>2021/01/29</td>
+						<td>5</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>5500</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act8">
+						<td>台北</td>
+						<td>天鵝桌遊營(國小B)</td>
+						<td>2021/02/01</td>
+						<td>2021/02/05</td>
+						<td>5</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>5500</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act9">
+						<td>台中</td>
+						<td>天鵝桌遊營(國小)</td>
+						<td>2021/01/25</td>
+						<td>2021/01/29</td>
+						<td>5</td>
+						<td>瓦屋桌遊休閒館</td>
+						<td>台中市南屯區向上南路一段197號</td>
+						<td>5500</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+					<tr id="act10">
+						<td>高雄</td>
+						<td>天鵝桌遊營(國小)</td>
+						<td>2021/01/25</td>
+						<td>2021/01/29</td>
+						<td>5</td>
+						<td>頭比家桌遊咖啡館</td>
+						<td>高雄市鼓山區明華路7號</td>
+						<td>5500</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+				</table>
+		</div>
+		<div class="lane3">
+			<h3>桌遊研習</h3>
+			<figure class="f1" width="600Px">
+				<table class="t3">
+					<tr>
+						<th>地區</th>
+						<th>類型</th>
+						<th>時間1</th>
+						<th>時間2</th>
+						<th>地點</th>
+						<th>地址</th>
+						<th>費用</th>
+						<th>報名</th>
+					</tr>
+					<tr id="act11">
+						<td>台北</td>
+						<td>桌遊研習</td>
+						<td>2021/4/25</td>
+						<td>2021/4/25</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>3000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+
+					</tr>
+					<tr id="act12">
+						<td>台北</td>
+						<td>桌遊研習</td>
+						<td>2020/05/02</td>
+						<td>2020/05/02</td>
+						<td>Swan Cafe 天鵝桌遊館</td>
+						<td>台北市文山區羅斯福路五段170巷37號</td>
+						<td>3000</td>
+						<td><button>
+								<a href="regisform.jsp">立即報名</a>
+							</button></td>
+					</tr>
+				</table>
+		</div>
+		</figure>
+</body>
+
+</html>

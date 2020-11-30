@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="分類檢索表.css">
+    <style>
+        .divst_form {
+            border: 1px solid black;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 15px;
+            background-image: url("../image/深紅背景.jpg");
+            position: relative;
+            float: left;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            margin-left: 25px;
+            margin-top: 15px;
+            padding: 5px;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <head>
+        <div>
+            <ul class="listst1">
+                <li>
+                    <p
+                        style="font-size: xx-large;font-weight:bold; width: fit-content; margin-left: 10px;margin-bottom: 0px;">
+                        <big><big><big>享玩 桌遊</big></big>
+                        </big>
+                    </p>
+                </li>
+                <p style="font-size: larger;font-weight:bold;"><big>讓因桌遊而產生的歡笑&emsp;充滿生命中的每分每秒</big></p>
+            </ul>
+        </div>
+        <hgroup>
+            <h2 style="width: fit-content;">放輕心情</h2>
+            <h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;享受與親友</h2>
+            <h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;共同度過的桌遊時光</h2>
+        </hgroup>
+    </head>
+    <nav class="nav">
+        <div>
+            <span style="margin-left: 80px ;margin-right: 80px;">網站起源</span>
+            <span style="margin-right: 80px;">最新消息</span>
+            <span style="margin-right: 80px;">分類檢索</span>
+            <span style="margin-right: 80px;">購物車</span>
+            <span style="margin-right: 80px;">討論區</span>
+            <span style="margin-right: 80px;">會員中心</span>
+            <span style="margin-right: 80px;">聯絡我們</span>
+        </div>
+
+    </nav>
+
+    <div class="nav" style="width:200px;height: fit-content;float: left;">
+        <p style="margin-left: 10px; font-size: 35px;font-weight: bold;color: rgb(234, 241, 171);">分類檢索表</p>
+        <ul class="ul">
+            <li>英文名稱
+                <img src="../image/箭頭.png" class="imgst" onclick="Ename()">
+                <div id="ename" class="divst1">
+                </div>
+            </li>
+            <li>中文名稱
+                <img src="../image/箭頭.png" class="imgst" onclick="Cname()">
+                <div id="cname" class="divst1">
+                </div>
+            </li>
+            <li>遊戲作者
+                <img src="../image/箭頭.png" class="imgst" onclick="Gmaker()">
+                <div id="gmaker" class="divst1">
+                </div>
+            </li>
+            <li>插畫家
+                <img src="../image/箭頭.png" class="imgst" onclick="Iss()">
+                <div id="iss" class="divst1">
+                </div>
+            </li>
+            <li>年齡
+                <img src="/image/箭頭.png" class="imgst" onclick="Age()">
+                <div id="age" class="divst1"></div>
+            </li>
+            <li>類型
+                <img src="../image/箭頭.png" class="imgst" onclick="Type()">
+                <div id="type" class="divst1"></div>
+            </li>
+            <li>遊戲人數
+                <img src="../image/箭頭.png" class="imgst" onclick="People()">
+                <div id="people" class="divst1"></div>
+            </li>
+            <li>遊戲時間
+                <img src="../image/箭頭.png" class="imgst" onclick="Time()">
+                <div id="time" class="divst1"></div>
+            </li>
+            <li>遊戲價格
+                <img src="../image/箭頭.png" class="imgst" onclick="Price()">
+                <div id="price" class="divst1"></div>
+            </li>
+            <li>進階搜尋
+
+            </li>
+        </ul>
+    </div>
+    <fieldset>
+        <fieldset style="border: none;">
+            <h1 style="float: left;margin-left: 25px;">年齡 : </h1>
+            <div class="divst_form">0-6 歲</div>
+            <div class="divst_form">7-12 歲</div>
+            <div class="divst_form">12 歲以上</div>
+        </fieldset>
+
+
+
+        <fieldset style="border: none;">
+            <h1 style="float: left;margin-left: 25px;">類型 : </h1>
+            <div class="divst_form">大腦</div>
+            <div class="divst_form">心理</div>
+            <div class="divst_form">重策略</div>
+            <div class="divst_form">中策略</div>
+            <div class="divst_form">輕策略</div>
+            <div class="divst_form">猜心</div>
+            <div class="divst_form">兒童</div>
+            <div class="divst_form">陣營</div>
+            <div class="divst_form">派對</div>
+            <div class="divst_form">骰子</div>
+        </fieldset>
+
+        <fieldset style="border: none;">
+            <h1 style="float: left;margin-left: 25px;">遊戲人數 : </h1>
+            <div class="divst_form">1-2 人</div>
+            <div class="divst_form">3-6 人</div>
+            <div class="divst_form">6人以上</div>
+        </fieldset>
+
+        <fieldset style="border: none;">
+            <h1 style="float: left;margin-left: 25px;">遊戲時間 : </h1>
+            <div class="divst_form">15 分鐘以內</div>
+            <div class="divst_form">15-30 分鐘</div>
+            <div class="divst_form">30-60 分鐘</div>
+            <div class="divst_form">60 分鐘以上</div>
+        </fieldset>
+
+        <fieldset style="border: none;">
+            <h1 style="float: left;margin-left: 25px;">遊戲價格 : </h1>
+            <div class="divst_form">$ 0-500 NT</div>
+            <div class="divst_form">$ 500-1000 NT</div>
+            <div class="divst_form">$ 1000-1500 NT</div>
+            <div class="divst_form">$ 1500 NT 以上</div>
+        </fieldset>
+    </fieldset>
+
+
+    <script src="分類檢索表.js"></script>
+</body>
+
+</html>

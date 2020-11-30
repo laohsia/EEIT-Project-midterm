@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get Game Information</title>
+</head>
+<body>
+	<form method=GET action="./GetGameInfoServlet">
+		請輸入資料 <br> SELECT E_name,C_name FROM Product WHERE C_name = ?.,
+		<p>
+			請輸入中文遊戲名稱<br> Example: '農家樂' :<br> <input type=TEXT
+				name="gameName">
+		<p>
+			<input type=SUBMIT value="gameInfo">
+	</form>
+</body>
+</html>

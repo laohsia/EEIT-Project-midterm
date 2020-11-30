@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>享玩 桌遊</title>
+    <style>
+        @import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
+
+        .delmar{
+            margin: 0;
+            padding: 0;
+        }
+        td{
+            vertical-align: inherit;
+            line-height: 30px;
+            border:1px solid black;
+            padding: 0 20px;
+            word-break: break-all;
+            text-align: center;
+        }
+        table{
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        body {
+            font-family: 'cwTeXYen' !important;
+            background-image: url(image/木質背景3.jpg);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+        }
+
+        .divst1 {
+            float: left;
+            border: 2px solid gray;
+            border-radius: 15px;
+            height: fit-content;
+            background-image: url(image/墨綠色背景.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 15px;
+            margin-left: 20px;
+        }
+
+        .divst2 {
+            width: 150px;
+            height: 750px;
+            border: 2px solid gray;
+            float: left;
+            border-radius: 15px;
+            margin-right: 10px;
+            background-image: url(image/墨綠色背景.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.7;
+        }
+
+        nav {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            
+            background-image: url(image/墨綠色背景.jpg);
+
+        }
+
+        hgroup {
+            /* border: 3px solid gray; */
+            width: fit-content;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-weight: bold
+        }
+
+        img {
+            width: 70px;
+            height: 70px;       
+            
+        }
+
+        /* figure {
+            border: 2px solid gray;
+            border-radius: 15px;
+            background-image: url(image/木質背景1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+
+        figcaption {
+            width: 500px;
+            text-align: justify;
+            font-weight: bold;
+        } */
+
+        span {
+            width: 100px;
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 15px;
+            font-size: larger;
+            margin-right: 100px;
+            font-weight: bold;
+            padding: 5px;
+            background-image: url(image/木質背景1.jpg);
+
+        }
+        .listst1 {
+            list-style: none;
+            list-style-image: url(image/骰子1.png);
+            margin-left: 20px;
+        }
+        a {
+            width: 100px;
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 15px;
+            font-size: larger;
+            margin-right: 100px;
+            font-weight: bold;
+            padding: 5px;
+            background-image: url(image/木質背景1.jpg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul class="listst1">
+                <li>
+                    <p style="font-size: xx-large;font-weight: bold; width: fit-content; margin-left: 10px;margin-bottom: 0px;">
+                        <big><big><big>享玩 桌遊</big></big></big></p>
+                </li>
+                <p style="font-size: larger;font-weight:bold;"><big>讓因桌遊而產生的歡笑&emsp;充滿生命中的每分每秒</big></p>
+            </ul>
+        </div>
+        <hgroup>
+            <h2 style="width: fit-content;">放輕心情</h2>
+            <h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;享受與親友</h2>
+            <h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;共同度過的桌遊時光</h2>
+        </hgroup>
+        <nav>
+            <div class="container">
+                <span style="margin-left: 100px ;">網站起源</span>
+                <a href="分類檢索表.html">分類檢索</a>
+                <span>購物車</span>
+                <span>桌遊店地圖</span>
+                <span>聯絡我們</span>
+            </div>
+        </nav>
+
+    </header>
+    <article>
+        <button type="button" id='myWantBuy' style="margin-left: 500px;">我的購物清單</button><button type="button" id='myLike'>我的追蹤清單</button><button type="button" id='myBuy'>出貨進度查詢</button><br>
+        <div id="WhicjBuy" style="width: 900px; margin-left: 500px; background-color: white">
+            <table id="buyList">
+            </table>
+        </div>
+        <div style="text-align: right;  width: 900px;  margin-left: 500px; background-color: #e2dfdd;">
+            <span style="border: none; margin: 0;"><big><big>目前金額共</big></big></span><span style="border: none; margin: 0; " id="totalMoney"><big><big>$</big></big></span><span style="border: none; margin: 0;"><big><big>元</big></big></span>
+        </div>
+    </article>
+    <footer style="clear: both;">
+        <section>
+            <p>本網站僅供中壢資策會 EEIT125-第三組練習使用 圖片僅供教學使用，無侵權疑慮</p>
+
+        </section>
+    </footer>
+
+
+    <script>
+        let totalMoney = 10;
+        let AllBuy = [["image/cake.jpg", '線上庫存僅剩11件(您訂購數量大於可即時出貨數量，需向門市調貨，備齊後出貨)', '20', '4'], ["image/cake.jpg", '線上庫存僅剩11件(您訂購數量大於可即時出貨數量，需向門市調貨，備齊後出貨)', '60', '6']];
+        AllBuy.push(["image/cake.jpg", '線上庫存僅剩11件(您訂購數量大於可即時出貨數量，需向門市調貨，備齊後出貨)', '30', '5']);
+        function delTitle(){    //隱藏表格標題(如果沒有AllBuy資料的畫執行)
+            for(let i=0; i<document.querySelectorAll("#menuBuy").length;i++){
+                document.querySelectorAll("#menuBuy")[i].style.display="none";
+            }
+        }
+        function showTitle(){   //顯示表格標題
+            for(let i=0; i<document.querySelectorAll("#menuBuy").length;i++){
+                document.querySelectorAll("#menuBuy")[i].style.display="";
+            }
+        }
+        function delList(c){    //刪除特定元素
+            AllBuy.splice(c,1,);
+            createTable();
+        }
+        function SetTotalMoney(){   //顯示於下方的總金額
+            document.getElementById('totalMoney').innerHTML = '<big><big>' + totalMoney + '</big></big>';
+        }
+
+        function createTable(){ //建立完整的Table
+            document.getElementById('buyList').innerHTML = "";
+            totalMoney = 0;
+            if(AllBuy.length != 0){
+                let s = '<caption><td style="width: 44px;" id="menuBuy">序號</td><td style="width: 101px;" id="menuBuy">商品圖</td><td style="width: 443px;" id="menuBuy">商品名稱</td><td style="width: 90px;" id="menuBuy">商品售價</td><td style="width: 48px;" id="menuBuy">數量</td><td style="width: 90px;" id="menuBuy">小計</td><td style="width: 76px;" id="menuBuy">變更</td></caption>';
+                for(let i = 0; i < AllBuy.length; i++){
+                    s += '<tr id="data>' + i + '">';
+                    s += '<td>' + (i+1) + '</td>';
+                    s += '<td><img src="' + AllBuy[i][0] + '"></td>';
+                    s += '<td>' + AllBuy[i][1] + '</td>';
+                    s += '<td>' + AllBuy[i][2] + '</td>';
+                    s += '<td>' + AllBuy[i][3] + '</td>';
+                    s += '<td>' + AllBuy[i][2]*AllBuy[i][3] + '</td>';
+                    s += '<td><button type="button" id="add' + i + '">追蹤</button><br><button type="button" id="del' + i + '">刪除</button></td>';
+                    s += '</tr>';
+                    totalMoney += AllBuy[i][2]*AllBuy[i][3];
+                }
+                document.getElementById('buyList').innerHTML += s;
+                createListen();
+            }
+            SetTotalMoney();
+        }
+
+        if(AllBuy.length != 0){
+            createTable();
+        }
+
+        function createListen(){
+            for(let i=0; i<AllBuy.length; i++){
+                document.getElementById('add' + i).addEventListener('click',SetTotalMoney); //加入追蹤清單
+                document.getElementById('del' + i).addEventListener('click',function(){
+                	delList(i);
+
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

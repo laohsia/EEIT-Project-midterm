@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名表單</title>
+    <link rel="stylesheet" href="regisform_style.css">
+</head>
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <div class="form">
+            <div class="st1">
+            <legend>
+                <h3>報名場次</h3>
+                        <label for="" class="t1">地區:</label>
+                        <select name="location">
+                            <option value="TPE" selected>台北</option>
+                            <option value="TYU">桃園</option>
+                            <OPtion value="HSU">新竹</OPtion>
+                            <OPtion value="TCH">台中</OPtion>
+                            <OPtion value="CHY">嘉義</OPtion>
+                            <OPtion value="TNA">台南</OPtion>
+                            <OPtion value="KHC">高雄</OPtion>
+                        </select><br>
+                    </legend>           
+            </div>
+            <br>
+            <div class="st2">
+                <labal class="t1" for="account1">姓名:</labal><br>
+                <input type="text" id="name" name="name" autocomplete="off" autofocus placeholder="姓名" size="10"
+                    maxlength="10">
+            <br>
+                <labal class="t1">生日:</labal><br>
+                西元
+                <input type="text" name="birthyear" size="4" maxlength="4" autofocus placeholder="yyyy">年
+                <input type="text" name="birthmonth" size="2" maxlength="2" autofocus placeholder="mm">月
+                <input type="text" name="birthday" size="2" maxlength="2"autofocus placeholder="dd">日
+            <br>
+                <label class="t1">身分證字號:</label><br>
+                <input type="text" name="idcode" maxlength="10" pattern="[a-zA-Z]{1}[1-2,4,7]{1}\d{8}">
+            <br>
+
+                <label for="" class="t1">聯絡地址:</label><br>
+                <input type="text" name="address" size="50" maxlength="50" autofocus placeholder="居住地址">
+            <br>
+                <label for="" class="t1">聯絡電話:</label><br>
+                <input type="text" name="phone" size="20" maxlength="20">
+            <br>
+                <label for="" class="t1">E-mail:</label><br>
+                <input type="text" name="mailaddress" size="20" maxlength="20">
+            </div>
+            </fieldset>
+                <div class="sub">
+                <input type="submit" value="送出">
+                <input type="reset" value="取消">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

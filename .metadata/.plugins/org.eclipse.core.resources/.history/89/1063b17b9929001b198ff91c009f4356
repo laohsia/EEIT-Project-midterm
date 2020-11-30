@@ -1,0 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:set var="iss" value="${param.iss}"></c:set>
+<sql:setDataSource var="ds" dataSource="jdbc/TableGameDB" />
+
+<sql:query sql="select * from product where iss like '%${iss}%'" var="rs" dataSource="${ds}" /> 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="Standard.css">
+</head>
+<body>
+<%request.setCharacterEncoding("UTF-8"); %>
+
+<head>
+        <div>
+            <ul class="standard_listst1">
+                <li>
+                    <p style="font-size: xx-large;font-weight:bold; width: fit-content; margin-left: 10px;margin-bottom: 0px;">
+                        <big><big><big>享玩 桌遊</big></big>
+                        </big>
+                    </p>
+                </li>
+                <p style="font-size: larger;font-weight:bold;"><big>讓因桌遊而產生的歡笑&emsp;充滿生命中的每分每秒</big></p>
+            </ul>
+        </div>
+        <hgroup class="standard_hgroup">
+            <h2 style="width: fit-content;">放輕心情</h2>
+            <h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;享受與親友</h2>
+            <h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;共同度過的桌遊時光</h2>
+        </hgroup>
+    </head>
+    <nav class="standard_nav">
+        <div>
+            <span class="standard_span" style="margin-left: 80px ;margin-right: 80px;">網站起源</span>
+            <span class="standard_span" style="margin-right: 80px;">最新消息</span>
+            <span class="standard_span" style="margin-right: 80px;">分類檢索</span>
+            <span class="standard_span" style="margin-right: 80px;">購物車</span>
+            <span class="standard_span" style="margin-right: 80px;">討論區</span>
+            <span class="standard_span" style="margin-right: 80px;">會員中心</span>
+            <span class="standard_span" style="margin-right: 80px;">聯絡我們</span>
+        </div>
+
+    </nav>
+
+
+<h2>搜尋結果 :  <c:out value="${rs.rowCount}"></c:out> 筆資料</h2>
+  <table border="1" style="background-color:beige">
+  	<th>e_name</th>
+    <th>c_name</th>
+    <th>img_url</th> 
+    <th>G_maker</th>
+    <th>iss</th>
+    <th>info</th>
+    <th>Price</th>
+    <c:forEach var="row" items="${rs.rows}">
+    <tr>
+    <td>${row.e_name}</td>
+    <td>${row.c_name}</td>
+    <td><img src="${row.img_url}" style="height:200px;weight:200px"/></td>
+    <td>${row.G_maker}</td>
+    <td>${row.iss}</td>
+    <td>${row.info}</td>
+    <td>${row.Price}</td>
+    </tr>
+    </c:forEach>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+  <form onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
+Select all the scripting languages you know:
+<div style="visibility:hidden; color:red; " id="chk_option_error">
+Please select at least one option.
+</div>
+
+<input type="checkbox" name="langs[]" id="langs_javascript" value="JavaScript" checked> <label for="langs_javascript">JavaScript</label>
+
+<input type="checkbox" name="langs[]" id="langs_perl" value="Perl"> <label for="langs_perl">Perl</label>
+
+
+<input type="checkbox" name="langs[]" id="langs_php" value="PHP" checked> <label for="langs_php">PHP</label>
+
+<input type="checkbox" name="langs[]" id="langs_ruby" value="Ruby"> <label for="langs_ruby">Ruby</label>
+
+<input type="submit" name="submit" value="Submit"/>
+
+</form>
+</div>
+<script type="text/javascript">
+function handleData()
+{
+    var form_data = new FormData(document.querySelector("form"));
+    
+    if(!form_data.has("langs[]"))
+    {
+        document.getElementById("chk_option_error").style.visibility = "visible";
+      return false;
+    }
+    else
+    {
+        document.getElementById("chk_option_error").style.visibility = "hidden";
+      return true;
+    }
+    
+}
+</script>
+
+</body>
+</html>

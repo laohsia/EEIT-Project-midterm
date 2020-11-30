@@ -1,0 +1,76 @@
+<header>
+	<div>
+		<ul class="listst1">
+			<li>
+							<p style="font-size: xx-large;font-weight: bold; width: fit-content; margin-left: 10px;margin-bottom: 0px;">
+                        <a href="http://10.31.25.26:8080/Project/首頁/首頁.html" style="text-decoration:none;"><big><big><big>享玩 桌遊</big></big>
+                        </big></a>
+                    </p>
+			</li>
+			<p style="font-size: larger; font-weight: bold;">
+				<big>讓因桌遊而產生的歡笑&emsp;充滿生命中的每分每秒</big>
+			</p>
+		</ul>
+	</div>
+	<hgroup>
+	<h2 style="width: fit-content;">放輕心情</h2>
+	<h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;享受與親友</h2>
+	<h2 style="width: fit-content;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;共同度過的桌遊時光</h2>
+	</hgroup> <nav>
+	<div>
+		<span style="margin-left: 100px;">網站起源</span> <span>最新消息</span> <span>分類檢索</span>
+		<span>購物車</span> <span>討論區</span> <span>會員中心</span> <span>聯絡我們</span>
+	</div>
+	</nav> </header>
+
+	<form action="adduser.jsp" method="post">
+		<fieldset>
+			<legend class="ti">註冊新會員</legend>
+			<table cellspacing="2" cellpadding="1" width="100%">
+				<tr>
+					<td>帳號ID:</td>
+					<td><input type="text" name="account" id="account" size="30"
+						maxlength="20" onblur="checkId()"><span id="sp1"></span></td>	
+				</tr>
+				<tr>
+					<td>密碼Password:</td>
+					<td><input type="password" name="password" id="password"
+						size="30" maxlength="20" onblur="checkPassword()">
+						<i class="fa fa-eye" onclick="showhide()" id="eye"></i>
+						<span id="sp2"></span></td>
+				</tr>
+				<tr>
+					<td>姓名Name:</td>
+					<td><input type="text" name="name" id="name" size="30"
+						maxlength="20" onblur="checkName()"><span id="sp4"></span></td>					
+				</tr>
+				<tr>
+					<td>性別Gender:</td>
+					<td><input type="radio" name="gender" id="gender" value="male">男<input
+						type="radio" name="gender" id="gender" value="female">女</td>
+				</tr>
+				<tr>
+					<td>生日Birthday:</td>
+					<td><input type="date" name="birthday" id="birthday">
+					</td>
+				</tr>
+				<tr>
+					<td>手機Phone:</td>
+					<td><input type="text" name="phone" id="phone" size="30"
+						maxlength="20" onblur="checkPhone()"><span id="sp5"></span></td>			
+				</tr>
+				<tr>
+					<td>信箱E-mail:</td>
+					<td><input type="mail" name="mailaddress" id="mailaddress"
+						size="30" maxlength="30" onblur="checkMail()"><span id="sp6"></span></td>					
+				</tr>
+			</table>
+			<br>
+			<center>
+				<input class="login" type="submit" name="submit" value="確認註冊"> <input
+					class="login" type="reset" value="清除重填">
+			</center>
+			<img class="img1" src="images/5.png">
+		</fieldset>
+		<script src="register.js"></script>
+	</form>
