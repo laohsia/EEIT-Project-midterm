@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.fsst{
+text-align:center;
+width:fit-content;
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+
+<fieldset class="fsst">
+        <legend>分類檢索表</legend>
+        <form action="./GetGameInfoServlet" method="get">
+            英文名稱 : <input type="text" name="e_name">
+            中文名稱 : <input type="text" name="c_name">
+            遊戲作者 : <input type="text" name="G_maker">
+            插畫家 : <input type="text" name="iss">
+            <br>
+            <label>年齡 :
+                <input type="radio" name="age" value="0-6"> 0-6歲
+                <input type="radio" name="age" value="7-12">7-12歲
+                <input type="radio" name="age" value="12up"> 12歲以上
+            </label>
+            <br>
+            <label>類型 :
+                <input type="radio" name="type" value="大腦">大腦
+                <input type="radio" name="type" value="心理">心理
+                <input type="radio" name="type" value="重策略">重策略
+                <input type="radio" name="type" value="中策略">中策略
+                <input type="radio" name="type" value="輕策略">輕策略
+                <input type="radio" name="type" value="猜心">猜心
+                <input type="radio" name="type" value="兒童">兒童
+                <input type="radio" name="type" value="陣營">陣營
+                <input type="radio" name="type" value="派對">派對
+                <input type="radio" name="type" value="骰子">骰子
+            </label>
+            <br>
+            <label>遊戲人數 :
+                <input type="radio" name="people" value="1-2">1-2 人
+                <input type="radio" name="people" value="3-6">3-6 人
+                <input type="radio" name="people" value="6以上">6人以上
+            </label>
+            <br>
+			<label>遊戲時間 :
+                <input type="radio" name="time" value="15 mins">15分鐘以內
+                <input type="radio" name="time" value="15-30 mins">15-30分鐘
+                <input type="radio" name="time" value="30-60 mins">30-60分鐘
+				<input type="radio" name="time" value="60 mins up">60分鐘以上
+            </label>
+            <br>
+            <label>遊戲價格 :
+                <input type="radio" name="price" value="0-500">新台幣 $0-500
+                <input type="radio" name="price" value="500-1000">新台幣 $500-1000
+                <input type="radio" name="price" value="1000-1500">新台幣 $1000-1500
+                <input type="radio" name="price" value="1500 up">新台幣 $1500以上
+            </label>
+            <br>
+            <input type="submit" value="送出">
+            <input type="reset" value="清除">
+        </form>
+    </fieldset>
+
+</body>
+</html>

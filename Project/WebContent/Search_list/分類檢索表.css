@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
+body {
+    font-family: 'cwTeXYen' !important;
+    background-image: url(../image/木質背景3.jpg);
+    background-size: cover;
+}
+
+.fsst {
+    text-align: left;
+    width: fit-content;
+}
+
+.listst1 {
+    list-style: none;
+    list-style-image: url(../image/骰子1.png);
+    margin-left: 20px;
+}
+
+hgroup {
+    /* border: 3px solid gray; */
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-weight: bold
+}
+
+.nav {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-image: url(../image/墨綠色背景.jpg);
+    font-size: larger;
+}
+
+.ul {
+    color: rgb(166, 245, 245);
+    font-size: larger;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+td {
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+span {
+    width: 100px;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 15px;
+    font-size: larger;
+    margin-right: 100px;
+    font-weight: bold;
+    padding: 5px;
+    background-image: url(../image/木質背景1.jpg);
+}
+
+
+
+.divst1 {
+    width: fit-content;
+    height: fit-content;
+    font-size: 15px;
+}
+
+.imgst {
+    width: 15px;
+    height: 15px;
+}
